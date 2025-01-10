@@ -1,0 +1,90 @@
+header {
+    text-align: center;
+    background-color: black;
+    margin: 0px;
+    padding-top: 5px;
+    height: 75px;
+}
+
+h1 {
+    color: white;
+}
+
+.file-input {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input {
+    width: 50%;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+#employees {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.button-div {
+    display: flex;
+    justify-content: end;
+}
+
+.button-div button {
+    background-color: rgb(110, 15, 15);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#employees td,
+#employees th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#employees tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#employees tr:hover {
+    background-color: #ddd;
+}
+
+#employees th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
+
+img {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+td span {
+    margin-left: 10px;
+}

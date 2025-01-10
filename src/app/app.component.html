@@ -1,0 +1,39 @@
+<header>
+  <h1>{{ title.split('-').join(' ') | uppercase }}</h1>
+</header>
+
+<div *ngIf="employeeList.length === 0" class="file-input">
+  <form>
+    <label for="">Upload CSV</label>
+    <input type="file" (change)="onFileSelect($event)">
+  </form>
+</div>
+
+<div *ngIf="employeeList.length > 0">
+  <div class="button-div">
+    <button (click)="employeeList = []">Clear Table</button>
+  </div>
+  <table id="employees">
+    <thead>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Reports To</th>
+      <th>Reporting Status</th>
+    </thead>
+    <tr *ngFor="let employee of employeeList">
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.fullName }}</td>
+      <td>{{ employee.role }}</td>
+      <td>{{ employee.currentReporters }}</td>
+      <td [ngStyle]="{ 'color': employee.isReported ? 'green' : 'red'}">
+        {{ employee.isReported ? 'Success' : 'Failed' }}
+        <span (click)="showMessage(employee)" *ngIf="!employee.isReported">
+          <img src="/exclamation-circle.svg" alt="error info" />
+        </span>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<router-outlet />
