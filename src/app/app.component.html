@@ -29,7 +29,7 @@
       <td [ngStyle]="{ 'color': employee.isReported ? 'green' : 'red'}">
         {{ employee.isReported ? 'Success' : 'Failed' }}
         <span (click)="showMessage(employee)" *ngIf="!employee.isReported">
-          <img src="/exclamation-circle.svg" alt="error info" />
+          <img src="exclamation-circle.svg" alt="error info" />
         </span>
       </td>
     </tr>
